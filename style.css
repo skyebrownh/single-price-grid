@@ -117,25 +117,21 @@ main .why-us li {
 
 /* media queries */
 @media (min-width: 1440px) {
-    main {
-        display: grid;
-        grid: repeat(2, 1fr) / repeat(2, 1fr);
-        height: 450px;
+    main .bottom-wrapper {
+        display: flex;
     }
 
     main section {
         padding: 45px;
     }
 
-    main .community {
-        grid-column: 1 / span 2;
-    }
-
     main .subscription {
         border-radius: 0 0 0 5px;
+        flex: 1;
     }
 
     main .why-us {
         border-radius: 0 0 5px 0;
+        flex: 1;
     }
 }
