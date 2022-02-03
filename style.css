@@ -1,5 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --cyan-color: hsl(179, 62%, 43%);
+    --cyan-color-lighter: hsl(179, 62%, 48%);
+    --bright-yellow-color: hsl(71, 73%, 54%);
+    --light-gray-color: hsl(204, 43%, 93%);
+    --grayish-blue-color: hsl(218, 22%, 67%);
+}
+
+/* global reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* base styles */
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background: var(--light-gray-color);
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h2,
+p {
+    margin-bottom: 20px;
+}
+
+span,
+small {
+    display: inline-block;
+}
+
+.color-cyan {
+    color: var(--cyan-color);
+}
+
+.color-bright-yellow {
+    color: var(--bright-yellow-color);
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 16px 0;
+    background: var(--bright-yellow-color);
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.1);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* card */
+main {
+    margin: 1rem;
+    border-radius: 5px;
+    max-width: 670px;
+}
+
+main section {
+    padding: 20px;
+}
+
+/* card - community */
+main .community {
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+}
+
+main .community .description {
+    color: var(--grayish-blue-color);
+    line-height: 1.7;
+}
+
+/* card - subscription */
+main .subscription {
+    background: var(--cyan-color);
+}
+
+main .subscription .cost {
+    margin-bottom: 8px;
+}
+
+main .subscription .amount {
+    font-size: 2rem;
+    margin-right: 8px;
+}
+
+main .subscription .cadence {
+    color: var(--light-gray-color);
+}
+
+/* card - why us */
+main .why-us {
+    background: var(--cyan-color-lighter);
+    border-radius: 0 0 5px 5px;
+}
+
+main .why-us li {
+    color: var(--light-gray-color);
+    margin-bottom: 3px;
+}
+
+/* media queries */
+@media (min-width: 1440px) {
+    main {
+        display: grid;
+        grid: repeat(2, 1fr) / repeat(2, 1fr);
+        height: 450px;
+    }
+
+    main section {
+        padding: 45px;
+    }
+
+    main .community {
+        grid-column: 1 / span 2;
+    }
+
+    main .subscription {
+        border-radius: 0 0 0 5px;
+    }
+
+    main .why-us {
+        border-radius: 0 0 5px 0;
+    }
 }
