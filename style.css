@@ -4,6 +4,7 @@
     --cyan-color: hsl(179, 62%, 43%);
     --cyan-color-lighter: hsl(179, 62%, 48%);
     --bright-yellow-color: hsl(71, 73%, 54%);
+    --bright-yellow-color-lighter: hsl(71, 73%, 64%);
     --light-gray-color: hsl(204, 43%, 93%);
     --grayish-blue-color: hsl(218, 22%, 67%);
 }
@@ -117,6 +118,11 @@ main .why-us li {
 
 /* media queries */
 @media (min-width: 1440px) {
+    .primary-btn:hover {
+        cursor: pointer;
+        background: var(--bright-yellow-color-lighter);
+    }
+    
     main .bottom-wrapper {
         display: flex;
     }
